@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F954AEED63405E0A08C7E51 /* Pods_VIPER_ListSimpsonQuotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8343523723FF18ACD7DCF18 /* Pods_VIPER_ListSimpsonQuotes.framework */; };
 		CD6B42632565F26200CD3660 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6B42622565F26200CD3660 /* AppDelegate.swift */; };
 		CD6B42652565F26200CD3660 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6B42642565F26200CD3660 /* SceneDelegate.swift */; };
 		CD6B42672565F26200CD3660 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6B42662565F26200CD3660 /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A86D5FF00BE552A5C502DBE /* Pods-VIPER-ListSimpsonQuotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPER-ListSimpsonQuotes.release.xcconfig"; path = "Target Support Files/Pods-VIPER-ListSimpsonQuotes/Pods-VIPER-ListSimpsonQuotes.release.xcconfig"; sourceTree = "<group>"; };
+		78F8174E6C98FCB23EAC39CA /* Pods-VIPER-ListSimpsonQuotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPER-ListSimpsonQuotes.debug.xcconfig"; path = "Target Support Files/Pods-VIPER-ListSimpsonQuotes/Pods-VIPER-ListSimpsonQuotes.debug.xcconfig"; sourceTree = "<group>"; };
 		CD6B425F2565F26200CD3660 /* VIPER-ListSimpsonQuotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VIPER-ListSimpsonQuotes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD6B42622565F26200CD3660 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD6B42642565F26200CD3660 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		CD6B426B2565F26300CD3660 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD6B426E2565F26300CD3660 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD6B42702565F26300CD3660 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8343523723FF18ACD7DCF18 /* Pods_VIPER_ListSimpsonQuotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIPER_ListSimpsonQuotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F954AEED63405E0A08C7E51 /* Pods_VIPER_ListSimpsonQuotes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02BAED6676E8AB8DF1802DDE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F8343523723FF18ACD7DCF18 /* Pods_VIPER_ListSimpsonQuotes.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		77682A14F9F339860621D1C8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				78F8174E6C98FCB23EAC39CA /* Pods-VIPER-ListSimpsonQuotes.debug.xcconfig */,
+				1A86D5FF00BE552A5C502DBE /* Pods-VIPER-ListSimpsonQuotes.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CD6B42562565F26200CD3660 = {
 			isa = PBXGroup;
 			children = (
 				CD6B42612565F26200CD3660 /* VIPER-ListSimpsonQuotes */,
 				CD6B42602565F26200CD3660 /* Products */,
+				77682A14F9F339860621D1C8 /* Pods */,
+				02BAED6676E8AB8DF1802DDE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD6B42732565F26300CD3660 /* Build configuration list for PBXNativeTarget "VIPER-ListSimpsonQuotes" */;
 			buildPhases = (
+				6983473A858241C0B0C23684 /* [CP] Check Pods Manifest.lock */,
 				CD6B425B2565F26200CD3660 /* Sources */,
 				CD6B425C2565F26200CD3660 /* Frameworks */,
 				CD6B425D2565F26200CD3660 /* Resources */,
+				560BA59D86009097EC5A5099 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		560BA59D86009097EC5A5099 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VIPER-ListSimpsonQuotes/Pods-VIPER-ListSimpsonQuotes-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VIPER-ListSimpsonQuotes/Pods-VIPER-ListSimpsonQuotes-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VIPER-ListSimpsonQuotes/Pods-VIPER-ListSimpsonQuotes-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6983473A858241C0B0C23684 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VIPER-ListSimpsonQuotes-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CD6B425B2565F26200CD3660 /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		CD6B42742565F26300CD3660 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78F8174E6C98FCB23EAC39CA /* Pods-VIPER-ListSimpsonQuotes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -301,6 +371,7 @@
 		};
 		CD6B42752565F26300CD3660 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A86D5FF00BE552A5C502DBE /* Pods-VIPER-ListSimpsonQuotes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
