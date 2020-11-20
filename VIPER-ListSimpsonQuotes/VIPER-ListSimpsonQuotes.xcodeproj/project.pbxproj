@@ -21,6 +21,13 @@
 		CD6B42932566D9BA00CD3660 /* QuoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6B428C2566D9BA00CD3660 /* QuoteService.swift */; };
 		CD6B42942566D9BA00CD3660 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6B428D2566D9BA00CD3660 /* Quote.swift */; };
 		CD6B42952566D9BA00CD3660 /* ImageDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6B428E2566D9BA00CD3660 /* ImageDataService.swift */; };
+		CD9F50E4256741F8004DDD3B /* QuotesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9F50DD256741F8004DDD3B /* QuotesPresenter.swift */; };
+		CD9F50E5256741F8004DDD3B /* QuotesLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9F50DE256741F8004DDD3B /* QuotesLocalDataManager.swift */; };
+		CD9F50E6256741F8004DDD3B /* QuotesProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9F50DF256741F8004DDD3B /* QuotesProtocols.swift */; };
+		CD9F50E7256741F8004DDD3B /* QuotesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9F50E0256741F8004DDD3B /* QuotesInteractor.swift */; };
+		CD9F50E8256741F8004DDD3B /* QuotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9F50E1256741F8004DDD3B /* QuotesView.swift */; };
+		CD9F50E9256741F8004DDD3B /* QuotesRemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9F50E2256741F8004DDD3B /* QuotesRemoteDataManager.swift */; };
+		CD9F50EA256741F8004DDD3B /* QuotesWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9F50E3256741F8004DDD3B /* QuotesWireFrame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +48,13 @@
 		CD6B428C2566D9BA00CD3660 /* QuoteService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteService.swift; sourceTree = "<group>"; };
 		CD6B428D2566D9BA00CD3660 /* Quote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		CD6B428E2566D9BA00CD3660 /* ImageDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDataService.swift; sourceTree = "<group>"; };
+		CD9F50DD256741F8004DDD3B /* QuotesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesPresenter.swift; sourceTree = "<group>"; };
+		CD9F50DE256741F8004DDD3B /* QuotesLocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesLocalDataManager.swift; sourceTree = "<group>"; };
+		CD9F50DF256741F8004DDD3B /* QuotesProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesProtocols.swift; sourceTree = "<group>"; };
+		CD9F50E0256741F8004DDD3B /* QuotesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesInteractor.swift; sourceTree = "<group>"; };
+		CD9F50E1256741F8004DDD3B /* QuotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesView.swift; sourceTree = "<group>"; };
+		CD9F50E2256741F8004DDD3B /* QuotesRemoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesRemoteDataManager.swift; sourceTree = "<group>"; };
+		CD9F50E3256741F8004DDD3B /* QuotesWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesWireFrame.swift; sourceTree = "<group>"; };
 		F8343523723FF18ACD7DCF18 /* Pods_VIPER_ListSimpsonQuotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIPER_ListSimpsonQuotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -97,6 +111,7 @@
 				CD6B42622565F26200CD3660 /* AppDelegate.swift */,
 				CD6B42642565F26200CD3660 /* SceneDelegate.swift */,
 				CD6B42662565F26200CD3660 /* ViewController.swift */,
+				CD9F50DB256741D4004DDD3B /* Modules */,
 				CD6B428A2566D9BA00CD3660 /* APIClient.swift */,
 				CD6B42892566D9BA00CD3660 /* APIManager.swift */,
 				CD6B42882566D9BA00CD3660 /* Endpoints.swift */,
@@ -110,6 +125,28 @@
 				CD6B42702565F26300CD3660 /* Info.plist */,
 			);
 			path = "VIPER-ListSimpsonQuotes";
+			sourceTree = "<group>";
+		};
+		CD9F50DB256741D4004DDD3B /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				CD9F50DC256741DB004DDD3B /* Quotes */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		CD9F50DC256741DB004DDD3B /* Quotes */ = {
+			isa = PBXGroup;
+			children = (
+				CD9F50DD256741F8004DDD3B /* QuotesPresenter.swift */,
+				CD9F50DE256741F8004DDD3B /* QuotesLocalDataManager.swift */,
+				CD9F50DF256741F8004DDD3B /* QuotesProtocols.swift */,
+				CD9F50E0256741F8004DDD3B /* QuotesInteractor.swift */,
+				CD9F50E1256741F8004DDD3B /* QuotesView.swift */,
+				CD9F50E2256741F8004DDD3B /* QuotesRemoteDataManager.swift */,
+				CD9F50E3256741F8004DDD3B /* QuotesWireFrame.swift */,
+			);
+			path = Quotes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,16 +263,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD9F50E5256741F8004DDD3B /* QuotesLocalDataManager.swift in Sources */,
+				CD9F50EA256741F8004DDD3B /* QuotesWireFrame.swift in Sources */,
 				CD6B42922566D9BA00CD3660 /* KingfisherService.swift in Sources */,
 				CD6B42952566D9BA00CD3660 /* ImageDataService.swift in Sources */,
+				CD9F50E7256741F8004DDD3B /* QuotesInteractor.swift in Sources */,
 				CD6B42672565F26200CD3660 /* ViewController.swift in Sources */,
+				CD9F50E6256741F8004DDD3B /* QuotesProtocols.swift in Sources */,
+				CD9F50E4256741F8004DDD3B /* QuotesPresenter.swift in Sources */,
 				CD6B42632565F26200CD3660 /* AppDelegate.swift in Sources */,
 				CD6B42902566D9BA00CD3660 /* APIManager.swift in Sources */,
 				CD6B42942566D9BA00CD3660 /* Quote.swift in Sources */,
+				CD9F50E9256741F8004DDD3B /* QuotesRemoteDataManager.swift in Sources */,
 				CD6B42932566D9BA00CD3660 /* QuoteService.swift in Sources */,
 				CD6B428F2566D9BA00CD3660 /* Endpoints.swift in Sources */,
 				CD6B42652565F26200CD3660 /* SceneDelegate.swift in Sources */,
 				CD6B42912566D9BA00CD3660 /* APIClient.swift in Sources */,
+				CD9F50E8256741F8004DDD3B /* QuotesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
