@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,13 @@
 		CD6B426A2565F26200CD3660 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD6B42682565F26200CD3660 /* Main.storyboard */; };
 		CD6B426C2565F26300CD3660 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD6B426B2565F26300CD3660 /* Assets.xcassets */; };
 		CD6B426F2565F26300CD3660 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD6B426D2565F26300CD3660 /* LaunchScreen.storyboard */; };
+		CD6B428F2566D9BA00CD3660 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6B42882566D9BA00CD3660 /* Endpoints.swift */; };
+		CD6B42902566D9BA00CD3660 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6B42892566D9BA00CD3660 /* APIManager.swift */; };
+		CD6B42912566D9BA00CD3660 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6B428A2566D9BA00CD3660 /* APIClient.swift */; };
+		CD6B42922566D9BA00CD3660 /* KingfisherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6B428B2566D9BA00CD3660 /* KingfisherService.swift */; };
+		CD6B42932566D9BA00CD3660 /* QuoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6B428C2566D9BA00CD3660 /* QuoteService.swift */; };
+		CD6B42942566D9BA00CD3660 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6B428D2566D9BA00CD3660 /* Quote.swift */; };
+		CD6B42952566D9BA00CD3660 /* ImageDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6B428E2566D9BA00CD3660 /* ImageDataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +34,13 @@
 		CD6B426B2565F26300CD3660 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD6B426E2565F26300CD3660 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD6B42702565F26300CD3660 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD6B42882566D9BA00CD3660 /* Endpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		CD6B42892566D9BA00CD3660 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		CD6B428A2566D9BA00CD3660 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		CD6B428B2566D9BA00CD3660 /* KingfisherService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KingfisherService.swift; sourceTree = "<group>"; };
+		CD6B428C2566D9BA00CD3660 /* QuoteService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteService.swift; sourceTree = "<group>"; };
+		CD6B428D2566D9BA00CD3660 /* Quote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		CD6B428E2566D9BA00CD3660 /* ImageDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDataService.swift; sourceTree = "<group>"; };
 		F8343523723FF18ACD7DCF18 /* Pods_VIPER_ListSimpsonQuotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIPER_ListSimpsonQuotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -56,7 +70,6 @@
 				78F8174E6C98FCB23EAC39CA /* Pods-VIPER-ListSimpsonQuotes.debug.xcconfig */,
 				1A86D5FF00BE552A5C502DBE /* Pods-VIPER-ListSimpsonQuotes.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -84,6 +97,13 @@
 				CD6B42622565F26200CD3660 /* AppDelegate.swift */,
 				CD6B42642565F26200CD3660 /* SceneDelegate.swift */,
 				CD6B42662565F26200CD3660 /* ViewController.swift */,
+				CD6B428A2566D9BA00CD3660 /* APIClient.swift */,
+				CD6B42892566D9BA00CD3660 /* APIManager.swift */,
+				CD6B42882566D9BA00CD3660 /* Endpoints.swift */,
+				CD6B428E2566D9BA00CD3660 /* ImageDataService.swift */,
+				CD6B428B2566D9BA00CD3660 /* KingfisherService.swift */,
+				CD6B428D2566D9BA00CD3660 /* Quote.swift */,
+				CD6B428C2566D9BA00CD3660 /* QuoteService.swift */,
 				CD6B42682565F26200CD3660 /* Main.storyboard */,
 				CD6B426B2565F26300CD3660 /* Assets.xcassets */,
 				CD6B426D2565F26300CD3660 /* LaunchScreen.storyboard */,
@@ -206,9 +226,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD6B42922566D9BA00CD3660 /* KingfisherService.swift in Sources */,
+				CD6B42952566D9BA00CD3660 /* ImageDataService.swift in Sources */,
 				CD6B42672565F26200CD3660 /* ViewController.swift in Sources */,
 				CD6B42632565F26200CD3660 /* AppDelegate.swift in Sources */,
+				CD6B42902566D9BA00CD3660 /* APIManager.swift in Sources */,
+				CD6B42942566D9BA00CD3660 /* Quote.swift in Sources */,
+				CD6B42932566D9BA00CD3660 /* QuoteService.swift in Sources */,
+				CD6B428F2566D9BA00CD3660 /* Endpoints.swift in Sources */,
 				CD6B42652565F26200CD3660 /* SceneDelegate.swift in Sources */,
+				CD6B42912566D9BA00CD3660 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

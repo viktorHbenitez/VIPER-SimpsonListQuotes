@@ -6,6 +6,6 @@ target 'VIPER-ListSimpsonQuotes' do
     pod 'Alamofire'
     pod 'PKHUD', '~> 5.0'
     pod 'Kingfisher', '~> 5.0'
-    pod 'AlamofireObjectMapper'
+    pod 'AlamofireObjectMapper', '~> 5.2'
     pod 'ObjectMapper'
 end

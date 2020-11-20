@@ -11,7 +11,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
-  - AlamofireObjectMapper
+  - AlamofireObjectMapper (~> 5.2)
   - Kingfisher (~> 5.0)
   - ObjectMapper
   - PKHUD (~> 5.0)
@@ -31,6 +31,6 @@ SPEC CHECKSUMS:
   ObjectMapper: 97111c97e054a6ee25917662106689f0b4127b37
   PKHUD: 98f3e4bc904b9c916f1c5bb6d765365b5357291b
 
-PODFILE CHECKSUM: c86c5fd052c49915872428ed745e4d9d33b32b46
+PODFILE CHECKSUM: 6a7f461c9e2a3f007fb1c402c44c00080991c28e
 
-COCOAPODS: 1.10.0.rc.1
+COCOAPODS: 1.10.0
