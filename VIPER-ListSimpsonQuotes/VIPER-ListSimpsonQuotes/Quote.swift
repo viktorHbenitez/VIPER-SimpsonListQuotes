@@ -24,4 +24,15 @@ struct Quote: Mappable {
         characterDirection <- map["characterDirection"]
     }
     
+    
+    init?(quote: String,
+          character: String,
+          image: String,
+          characterDirection: String){
+        self.quote = quote
+        self.character = character
+        self.image = image
+        self.characterDirection = character
+    }
+    
 }

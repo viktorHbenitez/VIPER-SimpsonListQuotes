@@ -12,6 +12,11 @@ import UIKit
 protocol QuotesViewProtocol: class {
     // PRESENTER -> VIEW
     var presenter: QuotesPresenterProtocol? { get set }
+    
+    func onFetchQuotesSuccess()
+    func onFetchQuotesFailure(error: String)
+    func showHUD()
+    func hideHUD()
 }
 
 protocol QuotesWireFrameProtocol: class {
@@ -25,11 +30,22 @@ protocol QuotesPresenterProtocol: class {
     var interactor: QuotesInteractorInputProtocol? { get set }
     var wireFrame: QuotesWireFrameProtocol? { get set }
     
+    var viewModelQuotes: [QuoteViewModel]? {get set}
+    
     func viewDidLoad()
+    func refresh()
+    
+    func numberOfRowsInSection() -> Int
+    func textLabelText(indexPath: IndexPath) -> String?
+    
+    func didSelectRowAt(index: Int)
+    func deselectRowAt(index: Int)
 }
 
 protocol QuotesInteractorOutputProtocol: class {
 // INTERACTOR -> PRESENTER
+    func didFetchDataInteractor(data: [Quote])
+    func didFetchDataError(code: Int)
 }
 
 protocol QuotesInteractorInputProtocol: class {
@@ -48,11 +64,13 @@ protocol QuotesDataManagerInputProtocol: class {
 protocol QuotesRemoteDataManagerInputProtocol: class {
     // INTERACTOR -> REMOTEDATAMANAGER
     var remoteRequestHandler: QuotesRemoteDataManagerOutputProtocol? { get set }
+    func fetchDataFromWorker()
 }
 
 protocol QuotesRemoteDataManagerOutputProtocol: class {
     // REMOTEDATAMANAGER -> INTERACTOR
-
+    func didFetchDataSuccess(data: [Quote])
+    func didFetchDataFail(code: Int)
 }
 
 protocol QuotesLocalDataManagerInputProtocol: class {

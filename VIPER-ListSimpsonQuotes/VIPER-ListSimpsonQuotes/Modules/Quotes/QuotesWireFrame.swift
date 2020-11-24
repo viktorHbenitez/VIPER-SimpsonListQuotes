@@ -13,8 +13,6 @@ class QuotesWireFrame: QuotesWireFrameProtocol {
 
     class func createQuotesModule() -> UINavigationController {
        
-        
-        
         // View
         let viewController = QuotesView()
         // Navigation Controller
