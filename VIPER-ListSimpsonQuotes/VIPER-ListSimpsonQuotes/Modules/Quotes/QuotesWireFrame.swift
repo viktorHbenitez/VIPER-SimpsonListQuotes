@@ -40,11 +40,14 @@ class QuotesWireFrame: QuotesWireFrameProtocol {
     }
     
     
+    func pushToQuoteDetail(with view: QuotesViewProtocol , _ quotesElement: Quote){
     
+        // present Detail Quotes
+        // Call init Detail Quotes
     
-    
-    static var mainStoryboard: UIStoryboard {
-        return UIStoryboard(name: "QuotesView", bundle: Bundle.main)
     }
+    
+    
+    
     
 }

@@ -17,11 +17,14 @@ protocol QuotesViewProtocol: class {
     func onFetchQuotesFailure(error: String)
     func showHUD()
     func hideHUD()
+    
+    func deselectedRowAt(index: Int)
 }
 
 protocol QuotesWireFrameProtocol: class {
     // PRESENTER -> WIREFRAME
     static func createQuotesModule() -> UINavigationController
+    func pushToQuoteDetail(with view: QuotesViewProtocol , _ quotesElement: Quote)
 }
 
 protocol QuotesPresenterProtocol: class {
@@ -46,6 +49,7 @@ protocol QuotesInteractorOutputProtocol: class {
 // INTERACTOR -> PRESENTER
     func didFetchDataInteractor(data: [Quote])
     func didFetchDataError(code: Int)
+    func getQuoteSuccess(quote: Quote)
 }
 
 protocol QuotesInteractorInputProtocol: class {
@@ -54,7 +58,9 @@ protocol QuotesInteractorInputProtocol: class {
     var localDatamanager: QuotesLocalDataManagerInputProtocol? { get set }
     var remoteDatamanager: QuotesRemoteDataManagerInputProtocol? { get set }
     
+    // input presenter -> interactor
     func loadQuote()
+    func retriveQuotes(index: Int)
 }
 
 protocol QuotesDataManagerInputProtocol: class {

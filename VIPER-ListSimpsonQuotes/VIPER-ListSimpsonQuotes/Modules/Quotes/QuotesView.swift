@@ -43,6 +43,12 @@ class QuotesView: UIViewController {
 }
 
 extension QuotesView: QuotesViewProtocol {
+   
+    
+    func deselectedRowAt(index: Int) {
+        self.tableView.deselectRow(at: IndexPath(row: index, section: 0), animated: true)
+    }
+    
     func showHUD() {
         HUD.show(.progress, onView: self.view)
     }
@@ -72,6 +78,11 @@ extension QuotesView: UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.didSelectRowAt(index: indexPath.row)
+        presenter?.deselectRowAt(index: indexPath.row)
+    }
 }
 
 // MARK: - UI Setup

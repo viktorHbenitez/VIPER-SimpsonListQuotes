@@ -18,7 +18,14 @@ class QuotesInteractor: QuotesInteractorInputProtocol {
     func loadQuote() {
         remoteDatamanager?.fetchDataFromWorker()
     }
-
+    
+    func retriveQuotes(index: Int){
+        if let quotes = self.quotes,
+           let qouteSelected = quotes[index],
+           quotes.indices.contains(index){
+            presenter?.getQuoteSuccess(quote: qouteSelected)
+        }
+    }
 }
 
 extension QuotesInteractor: QuotesRemoteDataManagerOutputProtocol {

@@ -31,11 +31,14 @@ extension QuotesPresenter: QuotesPresenterProtocol {
     }
     
     func didSelectRowAt(index: Int) {
-        
+        interactor?.retriveQuotes(index: index)
     }
     
     func deselectRowAt(index: Int) {
         
+        //  pass response to the view
+        
+        view?.deselectedRowAt(index: index)
     }
 
     func viewDidLoad() {
@@ -45,6 +48,7 @@ extension QuotesPresenter: QuotesPresenterProtocol {
 }
 
 extension QuotesPresenter: QuotesInteractorOutputProtocol {
+   
     func didFetchDataInteractor(data: [Quote]) {
         self.viewModelQuotes = data.compactMap{QuoteViewModel(quotes: $0)}
         view?.hideHUD()
@@ -56,6 +60,10 @@ extension QuotesPresenter: QuotesInteractorOutputProtocol {
         view?.onFetchQuotesFailure(error: "Couldn't fetch quoes \(code)")
     }
     
+    func getQuoteSuccess(quote: Quote) {
+        // past to the router function
+        print("quotes selected", quote)
+    }
 }
 
 
