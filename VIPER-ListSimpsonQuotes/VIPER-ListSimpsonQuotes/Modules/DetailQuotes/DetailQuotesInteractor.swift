@@ -9,23 +9,28 @@
 import Foundation
 
 class DetailQuotesInteractor: DetailQuotesInteractorInputProtocol {
+  
+  // MARK: Properties
+  weak var presenter: DetailQuotesInteractorOutputProtocol?
+  var localDatamanager: DetailQuotesLocalDataManagerInputProtocol?
+  var remoteDatamanager: DetailQuotesRemoteDataManagerInputProtocol?
+  
+  var quote: Quote?
+  
+  func getDataFromInteractor() {
     
-    // MARK: Properties
-    weak var presenter: DetailQuotesInteractorOutputProtocol?
-    var localDatamanager: DetailQuotesLocalDataManagerInputProtocol?
-    var remoteDatamanager: DetailQuotesRemoteDataManagerInputProtocol?
+    print("Interactor receives the request from Presenter to get image data from the server.")
     
-    var quote: Quote?
-    
-    func getDataFromInteractor() {
-        guard let element = quote else {
-            fatalError("Not element sending")
-        }
-        presenter?.getDatafromInteractor(element)
+    guard let quote = self.quote, let quotesImege = quote.image else { return }
+    KingfisherService.shared.loadImageFrom(urlString: quotesImege) { data  in
+      self.presenter?.getDataFromURLSucces(quote: quote, data: data)
+    } failure: { error in
+      self.presenter?.getImageFromURLFailure(quote)
     }
-    
+  }
+  
 }
 
 extension DetailQuotesInteractor: DetailQuotesRemoteDataManagerOutputProtocol {
-    // TODO: Implement use case methods
+  // TODO: Implement use case methods
 }

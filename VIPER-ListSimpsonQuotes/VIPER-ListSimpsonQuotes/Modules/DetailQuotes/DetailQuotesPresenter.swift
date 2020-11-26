@@ -25,11 +25,21 @@ extension DetailQuotesPresenter: DetailQuotesPresenterProtocol {
 }
 
 extension DetailQuotesPresenter: DetailQuotesInteractorOutputProtocol {
-    func getDatafromInteractor(_ quote: Quote) {
-        
-        
-        view?.getSuccesData(quote: quote)
-        
-    }
+  func getDataFromURLSucces(quote: Quote, data: Data?) {
+    
+    print("Presenter receives the result from Interactor after it's done its job.")
+    
+    guard let quoteElement = quote.quote, let character = quote.character, let data = data else {return }
+    
+    view?.onGetImageFromURLSuccess(quoteElement, character: character, image: ImageDataService.shared.convertToUIImage(from: data))
+    
+  }
   
+  func getImageFromURLFailure(_ quote: Quote) {
+    guard let quoteElement = quote.quote,
+          let character = quote.character else {return}
+    view?.onGetImageFromURLFailure(quoteElement, character: character)
+  }
+  
+    
 }
