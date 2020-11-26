@@ -35,9 +35,6 @@ extension QuotesPresenter: QuotesPresenterProtocol {
     }
     
     func deselectRowAt(index: Int) {
-        
-        //  pass response to the view
-        
         view?.deselectedRowAt(index: index)
     }
 
@@ -61,8 +58,7 @@ extension QuotesPresenter: QuotesInteractorOutputProtocol {
     }
     
     func getQuoteSuccess(quote: Quote) {
-        // past to the router function
-        print("quotes selected", quote)
+        wireFrame?.pushToQuoteDetail(with: view!, quote)
     }
 }
 

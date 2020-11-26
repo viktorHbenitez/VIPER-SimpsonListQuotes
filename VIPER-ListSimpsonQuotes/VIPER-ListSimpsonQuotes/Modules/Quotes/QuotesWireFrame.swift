@@ -41,13 +41,31 @@ class QuotesWireFrame: QuotesWireFrameProtocol {
     
     
     func pushToQuoteDetail(with view: QuotesViewProtocol , _ quotesElement: Quote){
-    
-        // present Detail Quotes
-        // Call init Detail Quotes
-    
+        let quoteDetailViewController = DetailQuotesWireFrame.createDetailQuotesModule(with: quotesElement)
+        
+        let viewController = view as! UIViewController
+        
+//        viewController.navigationController?.pushViewController(quoteDetailViewController, animated: true)
+//
+        let dummyViewController = DummyViewController()
+//        viewController.present(dummyViewController, animated: true)
+//
+        viewController.navigationController?.pushViewController(dummyViewController, animated: true)
+        
     }
     
     
     
     
+}
+
+
+class DummyViewController : UIViewController {
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.view.backgroundColor = .red
+    }
 }

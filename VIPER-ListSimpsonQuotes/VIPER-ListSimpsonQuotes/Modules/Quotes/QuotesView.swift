@@ -80,8 +80,8 @@ extension QuotesView: UITableViewDelegate, UITableViewDataSource{
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter?.didSelectRowAt(index: indexPath.row)
         presenter?.deselectRowAt(index: indexPath.row)
+        presenter?.didSelectRowAt(index: indexPath.row)
     }
 }
 
@@ -91,6 +91,7 @@ extension QuotesView {
         overrideUserInterfaceStyle = .light
         self.view.addSubview(tableView)
         tableView.addSubview(refreshControl)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
         tableView.heightAnchor.constraint(equalTo: self.view.heightAnchor).isActive = true
         self.navigationItem.title = "Simpsons Quotes"

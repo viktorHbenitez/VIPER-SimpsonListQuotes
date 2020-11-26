@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		3F954AEED63405E0A08C7E51 /* Pods_VIPER_ListSimpsonQuotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8343523723FF18ACD7DCF18 /* Pods_VIPER_ListSimpsonQuotes.framework */; };
+		CD5C2249256F249F00B67777 /* DetailQuotesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5C2242256F249F00B67777 /* DetailQuotesPresenter.swift */; };
+		CD5C224A256F249F00B67777 /* DetailQuotesLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5C2243256F249F00B67777 /* DetailQuotesLocalDataManager.swift */; };
+		CD5C224B256F249F00B67777 /* DetailQuotesProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5C2244256F249F00B67777 /* DetailQuotesProtocols.swift */; };
+		CD5C224C256F249F00B67777 /* DetailQuotesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5C2245256F249F00B67777 /* DetailQuotesInteractor.swift */; };
+		CD5C224D256F249F00B67777 /* DetailQuotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5C2246256F249F00B67777 /* DetailQuotesView.swift */; };
+		CD5C224E256F249F00B67777 /* DetailQuotesRemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5C2247256F249F00B67777 /* DetailQuotesRemoteDataManager.swift */; };
+		CD5C224F256F249F00B67777 /* DetailQuotesWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5C2248256F249F00B67777 /* DetailQuotesWireFrame.swift */; };
 		CD6B42632565F26200CD3660 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6B42622565F26200CD3660 /* AppDelegate.swift */; };
 		CD6B42652565F26200CD3660 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6B42642565F26200CD3660 /* SceneDelegate.swift */; };
 		CD6B426C2565F26300CD3660 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD6B426B2565F26300CD3660 /* Assets.xcassets */; };
@@ -31,6 +38,13 @@
 /* Begin PBXFileReference section */
 		1A86D5FF00BE552A5C502DBE /* Pods-VIPER-ListSimpsonQuotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPER-ListSimpsonQuotes.release.xcconfig"; path = "Target Support Files/Pods-VIPER-ListSimpsonQuotes/Pods-VIPER-ListSimpsonQuotes.release.xcconfig"; sourceTree = "<group>"; };
 		78F8174E6C98FCB23EAC39CA /* Pods-VIPER-ListSimpsonQuotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPER-ListSimpsonQuotes.debug.xcconfig"; path = "Target Support Files/Pods-VIPER-ListSimpsonQuotes/Pods-VIPER-ListSimpsonQuotes.debug.xcconfig"; sourceTree = "<group>"; };
+		CD5C2242256F249F00B67777 /* DetailQuotesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailQuotesPresenter.swift; sourceTree = "<group>"; };
+		CD5C2243256F249F00B67777 /* DetailQuotesLocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailQuotesLocalDataManager.swift; sourceTree = "<group>"; };
+		CD5C2244256F249F00B67777 /* DetailQuotesProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailQuotesProtocols.swift; sourceTree = "<group>"; };
+		CD5C2245256F249F00B67777 /* DetailQuotesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailQuotesInteractor.swift; sourceTree = "<group>"; };
+		CD5C2246256F249F00B67777 /* DetailQuotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailQuotesView.swift; sourceTree = "<group>"; };
+		CD5C2247256F249F00B67777 /* DetailQuotesRemoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailQuotesRemoteDataManager.swift; sourceTree = "<group>"; };
+		CD5C2248256F249F00B67777 /* DetailQuotesWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailQuotesWireFrame.swift; sourceTree = "<group>"; };
 		CD6B425F2565F26200CD3660 /* VIPER-ListSimpsonQuotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VIPER-ListSimpsonQuotes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD6B42622565F26200CD3660 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD6B42642565F26200CD3660 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +97,20 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		CD5C2241256F248700B67777 /* DetailQuotes */ = {
+			isa = PBXGroup;
+			children = (
+				CD5C2242256F249F00B67777 /* DetailQuotesPresenter.swift */,
+				CD5C2243256F249F00B67777 /* DetailQuotesLocalDataManager.swift */,
+				CD5C2244256F249F00B67777 /* DetailQuotesProtocols.swift */,
+				CD5C2245256F249F00B67777 /* DetailQuotesInteractor.swift */,
+				CD5C2246256F249F00B67777 /* DetailQuotesView.swift */,
+				CD5C2247256F249F00B67777 /* DetailQuotesRemoteDataManager.swift */,
+				CD5C2248256F249F00B67777 /* DetailQuotesWireFrame.swift */,
+			);
+			path = DetailQuotes;
+			sourceTree = "<group>";
+		};
 		CD6B42562565F26200CD3660 = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +152,7 @@
 		CD9F50DB256741D4004DDD3B /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				CD5C2241256F248700B67777 /* DetailQuotes */,
 				CD9F50DC256741DB004DDD3B /* Quotes */,
 			);
 			path = Modules;
@@ -258,20 +287,27 @@
 			files = (
 				CD9F50E5256741F8004DDD3B /* QuotesLocalDataManager.swift in Sources */,
 				CD9F50EA256741F8004DDD3B /* QuotesWireFrame.swift in Sources */,
+				CD5C224C256F249F00B67777 /* DetailQuotesInteractor.swift in Sources */,
 				CD6B42922566D9BA00CD3660 /* KingfisherService.swift in Sources */,
 				CD6B42952566D9BA00CD3660 /* ImageDataService.swift in Sources */,
 				CD9F50E7256741F8004DDD3B /* QuotesInteractor.swift in Sources */,
+				CD5C224B256F249F00B67777 /* DetailQuotesProtocols.swift in Sources */,
 				CD9F50E6256741F8004DDD3B /* QuotesProtocols.swift in Sources */,
+				CD5C224D256F249F00B67777 /* DetailQuotesView.swift in Sources */,
 				CD9F50E4256741F8004DDD3B /* QuotesPresenter.swift in Sources */,
 				CD6B42632565F26200CD3660 /* AppDelegate.swift in Sources */,
 				CD6B42902566D9BA00CD3660 /* APIManager.swift in Sources */,
 				CD6B42942566D9BA00CD3660 /* Quote.swift in Sources */,
+				CD5C224F256F249F00B67777 /* DetailQuotesWireFrame.swift in Sources */,
 				CD9F50E9256741F8004DDD3B /* QuotesRemoteDataManager.swift in Sources */,
 				CD6B42932566D9BA00CD3660 /* QuoteService.swift in Sources */,
 				CD6B428F2566D9BA00CD3660 /* Endpoints.swift in Sources */,
 				CD6B42652565F26200CD3660 /* SceneDelegate.swift in Sources */,
+				CD5C2249256F249F00B67777 /* DetailQuotesPresenter.swift in Sources */,
+				CD5C224A256F249F00B67777 /* DetailQuotesLocalDataManager.swift in Sources */,
 				CD6B42912566D9BA00CD3660 /* APIClient.swift in Sources */,
 				CD9F50E8256741F8004DDD3B /* QuotesView.swift in Sources */,
+				CD5C224E256F249F00B67777 /* DetailQuotesRemoteDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,7 +448,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8HT5VQ4X4G;
 				INFOPLIST_FILE = "VIPER-ListSimpsonQuotes/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -431,7 +469,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8HT5VQ4X4G;
 				INFOPLIST_FILE = "VIPER-ListSimpsonQuotes/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
